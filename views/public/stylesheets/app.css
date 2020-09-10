@@ -1,0 +1,16 @@
+i.icon{
+    font-size: 2em;
+}
+.container.menu{
+    margin-bottom: 7em;
+}
+#belownavbar{
+    margin-top: 20px;
+}
+.container.main{
+    margin-top: 20px;
+}
+
+#delete{
+    display: inline;
+}

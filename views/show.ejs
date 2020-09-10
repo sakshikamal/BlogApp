@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+<h1>hidden lol</h1>
+<div class="ui main text container segment">
+    <div class="ui huge header" style="text-align: center;"> <%=blog.name %> </div>
+    <div class="ui top-attached">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%=blog.image%>" ></img>
+            <div class="content">
+                <p><%=blog.created.toDateString()%></p>
+            </div>
+            <div class="desciption">
+                <p><%=blog.body%></p>
+            </div>
+            <a class="ui secondary button" href="/blogs/<%=blog._id%>/edit">Edit</a>
+            
+            <form id="delete" action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                <button type="submit" class="ui secondary button">Delete</button> 
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+<%- include("partials/footer") %>

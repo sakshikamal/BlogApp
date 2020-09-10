@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+<div class="container" style="align-content: center;">
+    <h1 style="text-align: center;">Edit Blog</h1>
+    <div class="ui main text container segment" style="width: 55%; align-items: flex-end;">
+        <div class="ui huge header">Edit Blog "<%= blog.name %>"</div>
+        <form class="ui form" action="/blogs/<%=blog._id%>?_method=PUT" method="POST"> 
+            <!-- Method override -->
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="blog[name]" class="form-control" value="<%=blog.name%>">
+            </div>
+            <div class="field">
+                <label>Image</label>
+                <input type="text" name="blog[image]" class="form-control" value="<%=blog.image%>">
+            </div>
+            <div class="field">
+                <label>Blog Content</label>
+                <textarea name="blog[body]" id="" cols="30" rows="10" required><%=blog.body%></textarea>
+            </div>
+            <button type="submit" class="ui secondary button">Submit</button> 
+        </form>
+
+        <a href="/blogs/<%=blog._id%>">Go back</a>
+    </div>
+</div>
+
+<%- include("partials/footer") %>

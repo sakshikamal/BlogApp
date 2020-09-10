@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+
+<div class="container" style="align-content: center;">
+    <h1 style="text-align: center;">Create a new Blog Post</h1>
+    <div class="ui main text container segment" style="width: 55%; align-items: flex-end;">
+        <div class="ui huge header">New Blog</div>
+        <form class="ui form" action="/blogs" method="POST">
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="blog[name]" class="form-control" placeholder="Title">
+            </div>
+            <div class="field">
+                <label>Image</label>
+                <input type="text" name="blog[image]" class="form-control" placeholder="imageurl">
+            </div>
+            <div class="field">
+                <label>Blog Content</label>
+                <textarea name="blog[body]" id="" cols="30" rows="10" placeholder="Blog post goes here" required></textarea>
+            </div>
+            <button type="submit" class="ui secondary button">Submit</button> 
+        </form>
+
+        <a href="/blogs">Go back</a>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
